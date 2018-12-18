@@ -40,10 +40,15 @@ namespace Project_Alpha
                 {
                     if (rdr[0].ToString() == this.textBox1.Text && rdr[1].ToString() == this.textBox2.Text){
                         this.label1.Text = "Done";
+                        int id_worker = Convert.ToInt32(rdr[2]);
+                        int id_factory= Convert.ToInt32(rdr[3]);
                         DateTime now = DateTime.Now;
-                        cmd.CommandText = "INSERT INTO `project_1`.`logs` (`time_when`, `ID_worker`, `ID_factory`) VALUES (\'" + now.ToString("yyyy/MM/dd HH:mm:ss") + "\', \'" + rdr[2] + "\', \'" + rdr[3] + "\');";
+                        cmd.CommandText = "INSERT INTO `project_1`.`logs` (`time_when`, `ID_worker`, `ID_factory`) VALUES (\'" + now.ToString("yyyy/MM/dd HH:mm:ss") + "\', \'" + id_worker + "\', \'" + id_factory + "\');";
                         rdr.Close();
                         cmd.ExecuteNonQuery();
+                        this.Hide();
+                        Select_factories form = new Select_factories(this, id_worker);
+                        form.Show();
                         break;
                     }
                     else
@@ -52,7 +57,8 @@ namespace Project_Alpha
 
                     }
                 }
-                rdr.Close();
+                if (!rdr.IsClosed) {
+                    rdr.Close(); }
 
             }
             catch (Exception ex)
@@ -62,6 +68,11 @@ namespace Project_Alpha
             conn.Close();
            
 
+        }
+        private void Closing_win(object sender, EventArgs e)
+        {
+            //MessageBox.Show("dg");
+            //e.Cancel = true;
         }
     }
 }
