@@ -33,5 +33,17 @@ namespace Project_Alpha
         {
             login_form.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Save_slots form_slots = new Save_slots();
+            form_slots.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Save_slots form_slots = new Save_slots();
+            form_slots.ShowDialog();
+        }
     }
 }

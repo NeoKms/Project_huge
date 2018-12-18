@@ -118,10 +118,58 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="back_empty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\back_empty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="factories_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\factories_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="factories_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\factories-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="factories_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\factories_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="factories_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\factories-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="factories_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\factories_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="factories_31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\factories-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="factories_clipart_pabrik_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\factories-clipart-pabrik-6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Factory_PNG_Pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Factory-PNG-Pic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Handdrawngoods_Busy_Factory" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Handdrawngoods-Busy-Factory.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Handdrawngoods_Busy_Factory1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Handdrawngoods-Busy-Factory.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Pixel_Factory" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pixel_Factory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pixel_factory_png_28491" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pixel-factory-png_28491.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pixel_factory_png_284911" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pixel-factory-png_28491.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_plus_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\red-plus-02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_1057f3131271f23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1057f3131271f23.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_92711637_silhouette_of_a_power_plant" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\92711637-silhouette-of-a-power-plant.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -58,6 +58,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Save_slots.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Save_slots.Designer.cs">
+      <DependentUpon>Save_slots.cs</DependentUpon>
+    </Compile>
     <Compile Include="Select_factories.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,14 +75,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <EmbeddedResource Include="Save_slots.resx">
+      <DependentUpon>Save_slots.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Select_factories.resx">
       <DependentUpon>Select_factories.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,7 +100,49 @@
     <None Include="Resources\Pixel_Factory.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\factories_2.jpg" />
+    <None Include="Resources\pixel-factory-png_28491.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixel-factory-png_28491.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Handdrawngoods-Busy-Factory.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red-plus-02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factories-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factories-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factories-3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Factory-PNG-Pic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factories-clipart-pabrik-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1057f3131271f23.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\92711637-silhouette-of-a-power-plant.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factories_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factories_3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -28,44 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Select_factories));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Image = global::Project_Alpha.Properties.Resources.factories_2;
-            this.button2.Location = new System.Drawing.Point(598, 265);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(507, 346);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Управление заводом";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.BackgroundImage = global::Project_Alpha.Properties.Resources.Pixel_Factory;
-            this.button1.CausesValidation = false;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(85, 265);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(507, 346);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Создание завода";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(128, 91);
+            this.label1.Location = new System.Drawing.Point(131, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(933, 46);
             this.label1.TabIndex = 2;
@@ -75,25 +49,62 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(347, 178);
+            this.label2.Location = new System.Drawing.Point(350, 104);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(487, 46);
             this.label2.TabIndex = 3;
             this.label2.Text = "Выберите режим работы";
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::Project_Alpha.Properties.Resources.factories_create;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(601, 191);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(507, 346);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Управление заводом";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.BackgroundImage = global::Project_Alpha.Properties.Resources.Pixel_Factory;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.CausesValidation = false;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(88, 191);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(507, 346);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Создание завода";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Select_factories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.ClientSize = new System.Drawing.Size(1200, 596);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1222, 652);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1222, 652);
             this.Name = "Select_factories";
-            this.Text = "Select_factories";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Factories";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Select_factories_FormClosed);
             this.Load += new System.EventHandler(this.Select_factories_Load);
             this.ResumeLayout(false);
