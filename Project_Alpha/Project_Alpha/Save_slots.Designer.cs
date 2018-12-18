@@ -48,7 +48,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.BackgroundImage = global::Project_Alpha.Properties.Resources.red_plus_02;
+            this.button1.BackgroundImage = global::Project_Alpha.Properties.Resource.factories_1;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.Cursor = System.Windows.Forms.Cursors.Default;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -63,7 +63,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.BackgroundImage = global::Project_Alpha.Properties.Resources._1057f3131271f23;
+            this.button2.BackgroundImage = global::Project_Alpha.Properties.Resource.factories_2;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(55, 300);
@@ -77,7 +77,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.BackgroundImage = global::Project_Alpha.Properties.Resources._92711637_silhouette_of_a_power_plant;
+            this.button3.BackgroundImage = global::Project_Alpha.Properties.Resource.factories_3;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.Location = new System.Drawing.Point(55, 496);
