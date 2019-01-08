@@ -14,8 +14,13 @@ namespace Project_Alpha
 {
     public partial class Save_slots : Form
     {
-        public Save_slots()
+        Form select_factory_form, login_form;
+        int id_authorize_worker;
+        public Save_slots(Form pred_form, Form login_forms,  int id_worker)
         {
+            select_factory_form = pred_form;
+            login_form = login_forms;
+            id_authorize_worker = id_worker;
             InitializeComponent();
         }
 
@@ -36,7 +41,7 @@ namespace Project_Alpha
                     {
                         if (rdr[1].ToString()=="empty")
                         {
-                            this.button1.Text = "Пустой слот сохранения";
+                            this.button1.Text = "Пустой слот";
                             this.button1.BackgroundImage= global::Project_Alpha.Properties.Resource.red_plus_02;
                         }
                         else
@@ -50,7 +55,7 @@ namespace Project_Alpha
                     {
                         if (rdr[1].ToString() == "empty")
                         {
-                            this.button2.Text = "Пустой слот сохранения";
+                            this.button2.Text = "Пустой слот";
                             this.button2.BackgroundImage = global::Project_Alpha.Properties.Resource.red_plus_02;
                         }
                         else
@@ -64,7 +69,7 @@ namespace Project_Alpha
                     {
                         if (rdr[1].ToString() == "empty")
                         {
-                            this.button3.Text = "Пустой слот сохранения";
+                            this.button3.Text = "Пустой слот";
                             this.button3.BackgroundImage = global::Project_Alpha.Properties.Resource.red_plus_02;
                         }
                         else
@@ -82,6 +87,40 @@ namespace Project_Alpha
                 MessageBox.Show(ex.ToString());
             }
             conn.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            create_form_1 form = new create_form_1();
+            form.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+        bool bt4 = false;
+        private void button4_Click(object sender, EventArgs e)
+        {
+            bt4 = true;
+            this.Close();
+        }
+
+        private void Save_slots_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (bt4){
+                select_factory_form.Show();
+            }
+            else
+            {
+                select_factory_form.Close();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

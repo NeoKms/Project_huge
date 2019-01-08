@@ -33,17 +33,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(131, 17);
+            this.label1.Location = new System.Drawing.Point(90, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(933, 46);
+            this.label1.Size = new System.Drawing.Size(1060, 46);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Добро пожаловать в центр управления заводом";
+            this.label1.Text = "Добро пожаловать в центр управления производством";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -86,12 +88,24 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(1109, 543);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(79, 41);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Назад";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Select_factories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1200, 596);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
@@ -105,6 +119,7 @@
             this.Name = "Select_factories";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Factories";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Select_factories_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Select_factories_FormClosed);
             this.Load += new System.EventHandler(this.Select_factories_Load);
             this.ResumeLayout(false);
@@ -118,5 +133,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button3;
     }
 }

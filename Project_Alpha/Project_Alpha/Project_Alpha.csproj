@@ -39,6 +39,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="create_form_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="create_form_1.Designer.cs">
+      <DependentUpon>create_form_1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +82,9 @@
     <Compile Include="Select_factories.Designer.cs">
       <DependentUpon>Select_factories.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="create_form_1.resx">
+      <DependentUpon>create_form_1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
