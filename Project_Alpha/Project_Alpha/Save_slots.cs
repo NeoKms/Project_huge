@@ -91,7 +91,7 @@ namespace Project_Alpha
 
         private void button1_Click(object sender, EventArgs e)
         {
-            create_form_1 form = new create_form_1();
+            create_form_1 form = new create_form_1(this,id_authorize_worker);
             form.Show();
             this.Hide();
         }

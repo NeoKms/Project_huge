@@ -82,6 +82,12 @@
     <Compile Include="Select_factories.Designer.cs">
       <DependentUpon>Select_factories.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl_spec.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_spec.Designer.cs">
+      <DependentUpon>UserControl_spec.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="create_form_1.resx">
       <DependentUpon>create_form_1.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Select_factories.resx">
       <DependentUpon>Select_factories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_spec.resx">
+      <DependentUpon>UserControl_spec.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
