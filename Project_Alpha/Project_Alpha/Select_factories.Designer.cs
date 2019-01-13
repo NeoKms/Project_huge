@@ -59,7 +59,7 @@
             // 
             // button2
             // 
-            this.button2.BackgroundImage = global::Project_Alpha.Properties.Resource.factories_create;
+            this.button2.BackgroundImage = global::Project_Alpha.Properties.Resources.factories_create;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(601, 191);
@@ -74,7 +74,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.BackgroundImage = global::Project_Alpha.Properties.Resource.Pixel_Factory;
+            this.button1.BackgroundImage = global::Project_Alpha.Properties.Resources.Pixel_Factory;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.CausesValidation = false;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));

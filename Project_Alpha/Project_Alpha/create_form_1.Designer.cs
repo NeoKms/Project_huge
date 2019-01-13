@@ -30,12 +30,12 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,21 +62,55 @@
             this.panel2.Size = new System.Drawing.Size(319, 672);
             this.panel2.TabIndex = 1;
             // 
-            // button1
+            // button6
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(12, 53);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(278, 52);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Основная информация";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(12, 588);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(278, 52);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "Отмена";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(12, 449);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(278, 52);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Подтвердить конфигурацию";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.Location = new System.Drawing.Point(12, 307);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(278, 52);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Управление персоналом";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Location = new System.Drawing.Point(12, 221);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(278, 52);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Выбор поставщиков";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(12, 159);
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Location = new System.Drawing.Point(12, 135);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(278, 52);
             this.button2.TabIndex = 1;
@@ -84,46 +118,18 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // button1
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(12, 272);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(278, 52);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Выбор поставщиков";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(12, 379);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(278, 52);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Управление персоналом";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(12, 476);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(278, 52);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Подтвердить конфигурацию";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(12, 568);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(278, 52);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Отмена";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(12, 53);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(278, 52);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Основная информация";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // create_form_1
             // 

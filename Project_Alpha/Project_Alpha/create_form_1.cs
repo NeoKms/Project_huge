@@ -15,14 +15,17 @@ namespace Project_Alpha
         Form pred_form;
         int id_work = 0;
         UserControl_spec spec = new UserControl_spec();
+        UserControl_post_ post = new UserControl_post_();
         public create_form_1(Form pred_f,int id)
         {
             InitializeComponent();
+            now_but_act = this.button1;
             pred_form = pred_f;
             id_work = id;
             this.panel1.Controls.Add(spec);
             Size si = new Size(942, 473);
             this.Size = si;
+            now_but_act.BackgroundImage = global::Project_Alpha.Properties.Resources.button_unactive;
 
         }
 
@@ -47,15 +50,22 @@ namespace Project_Alpha
                 pred_form.Close();
             }
         }
-
+        Button now_but_act;
+        
         private void button1_Click(object sender, EventArgs e)
         {
+            now_but_act.BackgroundImage = global::Project_Alpha.Properties.Resources.button_unactive;
+            now_but_act = this.button1;
+            this.now_but_act.BackgroundImage = global::Project_Alpha.Properties.Resources.button_active;
             this.panel1.Controls.Clear();
             this.panel1.Controls.Add(spec);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            now_but_act.BackgroundImage = global::Project_Alpha.Properties.Resources.button_unactive;
+            now_but_act = this.button2;
+            this.now_but_act.BackgroundImage = global::Project_Alpha.Properties.Resources.button_active;
             this.panel1.Controls.Clear();
         }
         bool bt6 = false;
@@ -63,6 +73,15 @@ namespace Project_Alpha
         {
             bt6 = true;
             this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            now_but_act.BackgroundImage = global::Project_Alpha.Properties.Resources.button_unactive;
+            now_but_act = this.button3;
+            this.now_but_act.BackgroundImage = global::Project_Alpha.Properties.Resources.button_active;
+            this.panel1.Controls.Clear();
+            this.panel1.Controls.Add(post);
         }
     }
 }

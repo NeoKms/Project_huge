@@ -42,13 +42,13 @@ namespace Project_Alpha
                         if (rdr[1].ToString()=="empty")
                         {
                             this.button1.Text = "Пустой слот";
-                            this.button1.BackgroundImage= global::Project_Alpha.Properties.Resource.red_plus_02;
+                            this.button1.BackgroundImage= global::Project_Alpha.Properties.Resources.red_plus_02;
                         }
                         else
                         {
                             this.button1.Text = rdr[1].ToString();
                             this.button1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-                            this.button1.BackgroundImage = global::Project_Alpha.Properties.Resource.factories_1;
+                            this.button1.BackgroundImage = global::Project_Alpha.Properties.Resources.factories_1;
                         }
                     }
                     if (Convert.ToInt32(rdr[0]) == 2)
@@ -56,13 +56,13 @@ namespace Project_Alpha
                         if (rdr[1].ToString() == "empty")
                         {
                             this.button2.Text = "Пустой слот";
-                            this.button2.BackgroundImage = global::Project_Alpha.Properties.Resource.red_plus_02;
+                            this.button2.BackgroundImage = global::Project_Alpha.Properties.Resources.red_plus_02;
                         }
                         else
                         {
                             this.button2.Text = rdr[1].ToString();
                             this.button2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-                            this.button2.BackgroundImage = global::Project_Alpha.Properties.Resource.factories_2;
+                            this.button2.BackgroundImage = global::Project_Alpha.Properties.Resources.factories_2;
                         }
                     }
                     if (Convert.ToInt32(rdr[0]) == 3)
@@ -70,13 +70,13 @@ namespace Project_Alpha
                         if (rdr[1].ToString() == "empty")
                         {
                             this.button3.Text = "Пустой слот";
-                            this.button3.BackgroundImage = global::Project_Alpha.Properties.Resource.red_plus_02;
+                            this.button3.BackgroundImage = global::Project_Alpha.Properties.Resources.red_plus_02;
                         }
                         else
                         {
                             this.button3.Text = rdr[1].ToString();
                             this.button3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-                            this.button3.BackgroundImage = global::Project_Alpha.Properties.Resource.factories_3;
+                            this.button3.BackgroundImage = global::Project_Alpha.Properties.Resources.factories_3;
                         }
                     }
 

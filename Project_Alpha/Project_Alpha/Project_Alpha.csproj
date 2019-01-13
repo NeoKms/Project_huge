@@ -65,10 +65,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resource.Designer.cs">
+    <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Resource.resx</DependentUpon>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Save_slots.cs">
       <SubType>Form</SubType>
@@ -82,6 +82,12 @@
     <Compile Include="Select_factories.Designer.cs">
       <DependentUpon>Select_factories.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl_post_.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_post_.Designer.cs">
+      <DependentUpon>UserControl_post_.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl_spec.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -94,15 +100,18 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resource.resx">
+    <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Save_slots.resx">
       <DependentUpon>Save_slots.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Select_factories.resx">
       <DependentUpon>Select_factories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_post_.resx">
+      <DependentUpon>UserControl_post_.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_spec.resx">
       <DependentUpon>UserControl_spec.cs</DependentUpon>
@@ -176,6 +185,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\factories_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_unactive.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
