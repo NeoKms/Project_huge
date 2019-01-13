@@ -26,6 +26,8 @@ namespace Project_Alpha
                 RowStyle style = new RowStyle(SizeType.AutoSize);
                 tableLayoutPanel1.RowStyles.Add(style);
                 matr_lable[i] = new Label();
+                matr_lable[i].Click += label__Click;
+                matr_lable[i].Name = "Label_tab_" + (i + 1);
                 matr_check[i] = new CheckBox();
                 matr_lable[i].Text = "Название детали №"+(i+1);
                 matr_lable[i].Width = 280;
@@ -36,6 +38,14 @@ namespace Project_Alpha
           // this.tableLayoutPanel1.ColumnStyles[0].Width = 100;
             this.tableLayoutPanel1.ColumnStyles[1].Width = 30;
             tableLayoutPanel1.Refresh();
+        }
+
+        private void label__Click(object sender, EventArgs e)
+        {
+            Label now_lab = sender as Label;
+            MessageBox.Show(now_lab.Name);
+          // throw new NotImplementedException();
+            
         }
 
         private void label2_Click(object sender, EventArgs e)

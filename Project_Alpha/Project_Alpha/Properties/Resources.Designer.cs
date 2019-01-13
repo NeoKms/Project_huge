@@ -63,6 +63,16 @@ namespace Project_Alpha.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _57_Obo_bulker_sks_vessel {
+            get {
+                object obj = ResourceManager.GetObject("57_Obo_bulker_sks_vessel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap button_active {
             get {
                 object obj = ResourceManager.GetObject("button_active", resourceCulture);
@@ -136,6 +146,16 @@ namespace Project_Alpha.Properties {
         internal static System.Drawing.Bitmap Pixel_Factory {
             get {
                 object obj = ResourceManager.GetObject("Pixel_Factory", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Product_Tanker {
+            get {
+                object obj = ResourceManager.GetObject("Product-Tanker", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

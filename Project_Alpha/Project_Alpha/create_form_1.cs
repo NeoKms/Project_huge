@@ -16,6 +16,7 @@ namespace Project_Alpha
         int id_work = 0;
         UserControl_spec spec = new UserControl_spec();
         UserControl_post_ post = new UserControl_post_();
+        UserControl_stock stock = new UserControl_stock();
         public create_form_1(Form pred_f,int id)
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace Project_Alpha
             this.panel1.Controls.Add(spec);
             Size si = new Size(942, 473);
             this.Size = si;
-            now_but_act.BackgroundImage = global::Project_Alpha.Properties.Resources.button_unactive;
+            now_but_act.BackgroundImage = global::Project_Alpha.Properties.Resources.button_active;
 
         }
 
@@ -67,6 +68,7 @@ namespace Project_Alpha
             now_but_act = this.button2;
             this.now_but_act.BackgroundImage = global::Project_Alpha.Properties.Resources.button_active;
             this.panel1.Controls.Clear();
+            this.panel1.Controls.Add(stock);
         }
         bool bt6 = false;
         private void button6_Click(object sender, EventArgs e)

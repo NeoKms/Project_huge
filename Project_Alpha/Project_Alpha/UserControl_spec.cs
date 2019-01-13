@@ -12,6 +12,9 @@ namespace Project_Alpha
 {
     public partial class UserControl_spec : UserControl
     {
+        UserControl_bucklers buckler = new UserControl_bucklers();
+        UserControl_smallTonn smallTonn = new UserControl_smallTonn();
+        Button now_but_act;
         public UserControl_spec()
         {
             InitializeComponent();
@@ -19,6 +22,17 @@ namespace Project_Alpha
             label1.Paint += Label1_Paint;
             label2.AutoSize = false;
             label2.Paint += Label2_Paint;
+            button2.Enabled = false;
+            button4.Enabled = false;
+            button5.Enabled = false;
+            button6.Enabled = false;
+            checkBox2.Enabled = false;
+            checkBox3.Enabled = false;
+            checkBox5.Enabled = false;
+            checkBox6.Enabled = false;
+            now_but_act = this.button3;
+            this.panel1.Controls.Add(buckler);
+            now_but_act.BackgroundImage = global::Project_Alpha.Properties.Resources.button_active;
         }
 
         private void UserControl_spec_Load(object sender, EventArgs e)
@@ -53,6 +67,29 @@ namespace Project_Alpha
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            now_but_act.BackgroundImage = global::Project_Alpha.Properties.Resources.button_unactive;
+            now_but_act = this.button3;
+            this.now_but_act.BackgroundImage = global::Project_Alpha.Properties.Resources.button_active;
+            this.panel1.Controls.Clear();
+            this.panel1.Controls.Add(buckler); 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            now_but_act.BackgroundImage = global::Project_Alpha.Properties.Resources.button_unactive;
+            now_but_act = this.button1;
+            this.now_but_act.BackgroundImage = global::Project_Alpha.Properties.Resources.button_active;
+            this.panel1.Controls.Clear();
+            this.panel1.Controls.Add(smallTonn); 
         }
     }
 }
