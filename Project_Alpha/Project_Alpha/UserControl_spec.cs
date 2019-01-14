@@ -12,12 +12,28 @@ namespace Project_Alpha
 {
     public partial class UserControl_spec : UserControl
     {
+        public string get_pres_name()
+        {
+            return this.textBox2.Text;
+        }
+        public string get_pres_s_name()
+        {
+            return this.textBox4.Text;
+        }
+        public string get_name()
+        {
+            return this.textBox1.Text;
+        }
         UserControl_bucklers buckler = new UserControl_bucklers();
         UserControl_smallTonn smallTonn = new UserControl_smallTonn();
         Button now_but_act;
-        public UserControl_spec()
+        int id_facroty = 0;
+        bool create;
+        public UserControl_spec(int id_fac,bool create_no)
         {
             InitializeComponent();
+            create = create_no;
+            id_facroty = id_fac;
             label1.AutoSize = false;
             label1.Paint += Label1_Paint;
             label2.AutoSize = false;

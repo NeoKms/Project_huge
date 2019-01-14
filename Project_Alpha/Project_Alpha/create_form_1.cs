@@ -7,22 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MySql.Data;
+using MySql.Data.MySqlClient;
 namespace Project_Alpha
 {
     public partial class create_form_1 : Form
     {
         Form pred_form;
-        int id_work = 0;
-        UserControl_spec spec = new UserControl_spec();
-        UserControl_post_ post = new UserControl_post_();
-        UserControl_stock stock = new UserControl_stock();
-        public create_form_1(Form pred_f,int id)
+        int id_work = 0,id_facroty=0;
+        bool create;
+        UserControl_spec spec;
+        UserControl_post_ post;
+        UserControl_stock stock;
+        public create_form_1(Form pred_f,int id,int id2, bool create_no)
         {
             InitializeComponent();
             now_but_act = this.button1;
+            create = create_no;
             pred_form = pred_f;
             id_work = id;
+            id_facroty = id2;
+            spec = new UserControl_spec(id_facroty,create);
+            post = new UserControl_post_(id_facroty, create);
+            stock = new UserControl_stock(id_facroty, create);
             this.panel1.Controls.Add(spec);
             Size si = new Size(942, 473);
             this.Size = si;
@@ -75,6 +82,60 @@ namespace Project_Alpha
         {
             bt6 = true;
             this.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("VI UVERENY?", "ETTENTION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result != DialogResult.No)
+            {
+                string connStr = "server=127.0.0.1;user=Admin;database=Project_1;port=3306;password=root";
+                MySqlConnection conn = new MySqlConnection(connStr);
+                MySqlCommand cmd = new MySqlCommand();
+                //cmd.CommandText = "INSERT INTO `project_1`.`stock_in_factory` (`ID_item`, `col_item`, `weigth`, `heigth`, `length`, `width`, `ID_factory`, `type_equipment`) VALUES ('68', '1', '0', '0', '0', '0', '1', 'Гайка тип 3')";
+                if (create)
+                {
+                    cmd.CommandText = "UPDATE factories set date_create=?date, name=?names, president_name=?pres_name, president_secons_name=?pres_s_name,col_workers=?work where ID_factory=?fact";
+                    cmd.Parameters.Add("?names", MySqlDbType.VarChar).Value = spec.get_name();
+                    DateTime now = DateTime.Now;
+                    cmd.Parameters.Add("?date", MySqlDbType.VarChar).Value = now.ToString("yyyy/MM/dd HH:mm:ss");
+                    cmd.Parameters.Add("?pres_name", MySqlDbType.VarChar).Value = spec.get_pres_name();
+                    cmd.Parameters.Add("?pres_s_name", MySqlDbType.VarChar).Value = spec.get_pres_s_name();
+                    cmd.Parameters.Add("?work", MySqlDbType.VarChar).Value = stock.get_col_work();
+                    cmd.Parameters.Add("?fact", MySqlDbType.VarChar).Value = id_facroty;
+                    try
+                    {
+                        conn.Open();
+                        cmd.Connection = conn;
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+                    try
+                    {
+                        conn.Open();
+                        cmd.Connection = conn;
+                        cmd.ExecuteNonQuery();
+                        // MySqlDataReader rdr = cmd.ExecuteReader();
+                        // while (rdr.Read())
+                        // {
+
+                        //  }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+                }
+                else
+                {
+
+                }
+                conn.Close();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)

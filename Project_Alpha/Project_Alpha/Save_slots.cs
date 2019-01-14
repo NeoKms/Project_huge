@@ -16,14 +16,16 @@ namespace Project_Alpha
     {
         Form select_factory_form, login_form;
         int id_authorize_worker;
-        public Save_slots(Form pred_form, Form login_forms,  int id_worker)
+        bool create;
+        public Save_slots(Form pred_form, Form login_forms,  int id_worker, bool new_no)
         {
             select_factory_form = pred_form;
             login_form = login_forms;
             id_authorize_worker = id_worker;
+            create = new_no;
             InitializeComponent();
         }
-
+        bool fac1, fac2, fac3;
         private void Save_slots_Load(object sender, EventArgs e)
         {
             string connStr = "server=127.0.0.1;user=Admin;database=Project_1;port=3306;password=root";
@@ -41,11 +43,13 @@ namespace Project_Alpha
                     {
                         if (rdr[1].ToString()=="empty")
                         {
+                            fac1 = false;
                             this.button1.Text = "Пустой слот";
                             this.button1.BackgroundImage= global::Project_Alpha.Properties.Resources.red_plus_02;
                         }
                         else
                         {
+                            fac1 = true;
                             this.button1.Text = rdr[1].ToString();
                             this.button1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
                             this.button1.BackgroundImage = global::Project_Alpha.Properties.Resources.factories_1;
@@ -55,11 +59,13 @@ namespace Project_Alpha
                     {
                         if (rdr[1].ToString() == "empty")
                         {
+                            fac2 = false;
                             this.button2.Text = "Пустой слот";
                             this.button2.BackgroundImage = global::Project_Alpha.Properties.Resources.red_plus_02;
                         }
                         else
                         {
+                            fac2 = true;
                             this.button2.Text = rdr[1].ToString();
                             this.button2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
                             this.button2.BackgroundImage = global::Project_Alpha.Properties.Resources.factories_2;
@@ -69,11 +75,13 @@ namespace Project_Alpha
                     {
                         if (rdr[1].ToString() == "empty")
                         {
+                            fac3 = false;
                             this.button3.Text = "Пустой слот";
                             this.button3.BackgroundImage = global::Project_Alpha.Properties.Resources.red_plus_02;
                         }
                         else
                         {
+                            fac3 = true;
                             this.button3.Text = rdr[1].ToString();
                             this.button3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
                             this.button3.BackgroundImage = global::Project_Alpha.Properties.Resources.factories_3;
@@ -91,14 +99,26 @@ namespace Project_Alpha
 
         private void button1_Click(object sender, EventArgs e)
         {
-            create_form_1 form = new create_form_1(this,id_authorize_worker);
-            form.Show();
+            if (!fac1)
+            {
+                create_form_1 form = new create_form_1(this, id_authorize_worker,1,create);
+                form.Show();
+            }
+            else
+            {
+
+            }
             this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            if (!fac2)
+            {
+                create_form_1 form = new create_form_1(this, id_authorize_worker, 2, create);
+                form.Show();
+            }
+            this.Hide();
         }
         bool bt4 = false;
         private void button4_Click(object sender, EventArgs e)
@@ -120,7 +140,12 @@ namespace Project_Alpha
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            if (!fac3)
+            {
+                create_form_1 form = new create_form_1(this, id_authorize_worker, 2,create);
+                form.Show();
+            }
+            this.Hide();
         }
     }
 }

@@ -36,7 +36,7 @@ namespace Project_Alpha
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Save_slots form_slots = new Save_slots(this,login_form,id_authorize_worker);
+            Save_slots form_slots = new Save_slots(this,login_form,id_authorize_worker,true);
             this.Hide();
             form_slots.Show();
             
@@ -44,7 +44,7 @@ namespace Project_Alpha
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Save_slots form_slots = new Save_slots(this, login_form, id_authorize_worker);
+            Save_slots form_slots = new Save_slots(this, login_form, id_authorize_worker,false);
             form_slots.Show();
             this.Hide();
         }
