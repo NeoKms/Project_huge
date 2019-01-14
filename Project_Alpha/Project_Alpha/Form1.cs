@@ -54,20 +54,15 @@ namespace Project_Alpha
                     else
                     {
                         this.label1.Text = "Login or password not correct. Retry again.";
-
                     }
                 }
-                if (!rdr.IsClosed) {
-                    rdr.Close(); }
-
+                if (!rdr.IsClosed) {rdr.Close(); }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
             conn.Close();
-           
-
         }
         private void Closing_win(object sender, EventArgs e)
         {

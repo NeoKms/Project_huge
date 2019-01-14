@@ -270,9 +270,9 @@
             this.label28.AutoSize = true;
             this.label28.Location = new System.Drawing.Point(6, 62);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(150, 20);
+            this.label28.Size = new System.Drawing.Size(146, 20);
             this.label28.TabIndex = 32;
-            this.label28.Text = "Кораблей создано";
+            this.label28.Text = "Корпусов создано";
             // 
             // label24
             // 
@@ -344,6 +344,7 @@
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Кадры";
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // label13
             // 

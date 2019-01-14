@@ -33,7 +33,6 @@ namespace Project_Alpha
                 label3.Text = rdr[0].ToString();
                 label4.Text = rdr[1].ToString() + "  " + rdr[2].ToString();
                 label6.Text = "Танкеры: Малотоннажный танкер";
-                label9.Text = "0000000";
 
             }
             catch (Exception ex)
@@ -41,6 +40,11 @@ namespace Project_Alpha
                 MessageBox.Show(ex.ToString());
             }
             conn.Close();
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
         }
 
         private void Factory_statistics_Load(object sender, EventArgs e)

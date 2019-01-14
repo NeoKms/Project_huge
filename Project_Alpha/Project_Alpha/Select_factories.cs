@@ -31,7 +31,6 @@ namespace Project_Alpha
 
         private void Select_factories_FormClosed(object sender, FormClosedEventArgs e)
         {
-            //login_form.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -39,7 +38,6 @@ namespace Project_Alpha
             Save_slots form_slots = new Save_slots(this,login_form,id_authorize_worker,true);
             this.Hide();
             form_slots.Show();
-            
         }
 
         private void button2_Click(object sender, EventArgs e)

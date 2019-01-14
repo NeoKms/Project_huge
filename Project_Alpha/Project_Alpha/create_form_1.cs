@@ -92,7 +92,6 @@ namespace Project_Alpha
                 string connStr = "server=127.0.0.1;user=Admin;database=Project_1;port=3306;password=root";
                 MySqlConnection conn = new MySqlConnection(connStr);
                 MySqlCommand cmd = new MySqlCommand();
-                //cmd.CommandText = "INSERT INTO `project_1`.`stock_in_factory` (`ID_item`, `col_item`, `weigth`, `heigth`, `length`, `width`, `ID_factory`, `type_equipment`) VALUES ('68', '1', '0', '0', '0', '0', '1', 'Гайка тип 3')";
                 if (create)
                 {
                     cmd.CommandText = "UPDATE factories set date_create=?date, name=?names, president_name=?pres_name, president_secons_name=?pres_s_name,col_workers=?work where ID_factory=?fact";
@@ -113,24 +112,6 @@ namespace Project_Alpha
                     {
                         MessageBox.Show(ex.ToString());
                     }
-                    try
-                    {
-                        //cmd.ExecuteNonQuery();
-                        // MySqlDataReader rdr = cmd.ExecuteReader();
-                        // while (rdr.Read())
-                        // {
-
-                        //  }
-
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.ToString());
-                    }
-                }
-                else
-                {
-
                 }
                 conn.Close();
                 stock.refresh_stock(spec.get_spec());
@@ -138,11 +119,7 @@ namespace Project_Alpha
                 this.Close();
             }
             bt6 = true;
-            bt5 = true;
-            
-
         }
-        bool bt5 = false;
         private void button3_Click(object sender, EventArgs e)
         {
             now_but_act.BackgroundImage = global::Project_Alpha.Properties.Resources.button_unactive;

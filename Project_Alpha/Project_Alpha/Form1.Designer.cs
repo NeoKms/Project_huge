@@ -91,9 +91,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(111, 326);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 20);
+            this.label3.Size = new System.Drawing.Size(117, 20);
             this.label3.TabIndex = 6;
-            this.label3.Text = "v.0.4a 9.01.18";
+            this.label3.Text = "v.0.9b 15.01.18";
             // 
             // Form1
             // 
