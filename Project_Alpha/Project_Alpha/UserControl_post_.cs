@@ -14,6 +14,32 @@ namespace Project_Alpha
 {
     public partial class UserControl_post_ : UserControl
     {
+        public void refresh_post()
+        {
+            string connStr = "server=127.0.0.1;user=Admin;database=Project_1;port=3306;password=root";
+            MySqlConnection conn = new MySqlConnection(connStr);
+            try
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "select max(ID_item) from stock_in_factory";
+                MySqlDataReader rdr = cmd.ExecuteReader();
+                rdr.Read();
+                int max_ID = Convert.ToInt32(rdr[0]);
+                rdr.Close();
+                for (int i = 0; i < col; i++)
+                {
+                    cmd.CommandText = "INSERT INTO suppliers_in_factory (ID_factory, ID_item, ID_supplier) VALUES ("+ Convert.ToInt32(id_fact)+ ","+Convert.ToInt32(matr_post[i, 0]) + ", "+ Convert.ToInt32(matr_post[i, 1]) + ")";
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            conn.Close();
+        }
         private int id_facroty = 0, id_fact = 0, col = 0;
         private bool create;
         private Label[] matr_lable;

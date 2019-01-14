@@ -24,11 +24,22 @@ namespace Project_Alpha
         {
             return this.textBox1.Text;
         }
+        public bool[] get_spec()
+        {
+            mass_spec[0] = checkBox1.Checked;
+            mass_spec[1] = checkBox2.Checked;
+            mass_spec[2] = checkBox3.Checked;
+            mass_spec[3] = checkBox4.Checked;
+            mass_spec[4] = checkBox5.Checked;
+            mass_spec[5] = checkBox6.Checked;
+            return mass_spec;
+        }
         UserControl_bucklers buckler = new UserControl_bucklers();
         UserControl_smallTonn smallTonn = new UserControl_smallTonn();
         Button now_but_act;
         int id_facroty = 0;
         bool create;
+        bool[] mass_spec=new bool[6];
         public UserControl_spec(int id_fac,bool create_no)
         {
             InitializeComponent();

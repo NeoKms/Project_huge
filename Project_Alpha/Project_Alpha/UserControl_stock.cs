@@ -18,8 +18,44 @@ namespace Project_Alpha
         {
             return Convert.ToInt32(this.textBox1.Text);
         }
-
-        int id_facroty = 0, end_id = 0;
+        public void refresh_stock(bool[] matrix_spec)
+        {
+            string connStr = "server=127.0.0.1;user=Admin;database=Project_1;port=3306;password=root";
+            MySqlConnection conn = new MySqlConnection(connStr);
+            try
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "select max(ID_item) from stock_in_factory";
+                MySqlDataReader rdr = cmd.ExecuteReader();
+                rdr.Read();
+                int max_ID = Convert.ToInt32(rdr[0]);
+                rdr.Close();
+                for (int i = 0; i < dataGridView1.RowCount; i++)
+                {
+                    max_ID++;
+                    cmd.CommandText = "INSERT INTO stock_in_factory (ID_item, col_item, weigth, heigth, length, width, ID_factory, type_equipment) VALUES ("+ Convert.ToInt32(max_ID)+", "+ Convert.ToInt32(dataGridView1.Rows[i].Cells[1].Value)+", '0', '0', '0', '0', "+ Convert.ToInt32(id_fac_true)+",'"+ dataGridView1.Rows[i].Cells[0].Value.ToString()+"')";
+                    cmd.ExecuteNonQuery();
+                }
+                if (matrix_spec[0])
+                {
+                    max_ID++; 
+                    cmd.CommandText = "INSERT INTO stock_in_factory (ID_item, col_item, weigth, heigth, length, width, ID_factory, type_equipment) VALUES (" + Convert.ToInt32(max_ID) + ",'0', '0', '0', '0', '0', " + Convert.ToInt32(id_fac_true) + ",'Buckler body')";
+                }
+                if (matrix_spec[3])
+                {
+                    max_ID++; 
+                    cmd.CommandText = "INSERT INTO stock_in_factory (ID_item, col_item, weigth, heigth, length, width, ID_factory, type_equipment) VALUES (" + Convert.ToInt32(max_ID) + ",'0', '0', '0', '0', '0', " + Convert.ToInt32(id_fac_true) + ",'Tanker hull')";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            conn.Close();
+        }
+        int id_facroty = 0, end_id = 0,id_fac_true;
         bool create;
         public UserControl_stock(int id_fac,bool create_no)
         {
@@ -29,7 +65,7 @@ namespace Project_Alpha
             {
                 id_facroty = id_fac;
             }
-    
+            id_fac_true = id_fac;
             string connStr = "server=127.0.0.1;user=Admin;database=Project_1;port=3306;password=root";
             MySqlConnection conn = new MySqlConnection(connStr);
             try

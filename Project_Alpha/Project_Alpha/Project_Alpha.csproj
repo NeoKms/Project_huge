@@ -57,6 +57,18 @@
     <Compile Include="create_form_1.Designer.cs">
       <DependentUpon>create_form_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Factory_control_center.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factory_control_center.Designer.cs">
+      <DependentUpon>Factory_control_center.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factory_statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factory_statistics.Designer.cs">
+      <DependentUpon>Factory_statistics.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +126,12 @@
     </Compile>
     <EmbeddedResource Include="create_form_1.resx">
       <DependentUpon>create_form_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factory_control_center.resx">
+      <DependentUpon>Factory_control_center.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factory_statistics.resx">
+      <DependentUpon>Factory_statistics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

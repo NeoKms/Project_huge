@@ -86,7 +86,7 @@ namespace Project_Alpha
 
         private void button5_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("VI UVERENY?", "ETTENTION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var result = MessageBox.Show("Вы уверены?", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result != DialogResult.No)
             {
                 string connStr = "server=127.0.0.1;user=Admin;database=Project_1;port=3306;password=root";
@@ -98,10 +98,10 @@ namespace Project_Alpha
                     cmd.CommandText = "UPDATE factories set date_create=?date, name=?names, president_name=?pres_name, president_secons_name=?pres_s_name,col_workers=?work where ID_factory=?fact";
                     cmd.Parameters.Add("?names", MySqlDbType.VarChar).Value = spec.get_name();
                     DateTime now = DateTime.Now;
-                    cmd.Parameters.Add("?date", MySqlDbType.VarChar).Value = now.ToString("yyyy/MM/dd HH:mm:ss");
+                    cmd.Parameters.Add("?date", MySqlDbType.DateTime).Value = now.ToString("yyyy/MM/dd HH:mm:ss");
                     cmd.Parameters.Add("?pres_name", MySqlDbType.VarChar).Value = spec.get_pres_name();
                     cmd.Parameters.Add("?pres_s_name", MySqlDbType.VarChar).Value = spec.get_pres_s_name();
-                    cmd.Parameters.Add("?work", MySqlDbType.VarChar).Value = stock.get_col_work();
+                    cmd.Parameters.Add("?work", MySqlDbType.Int32).Value = stock.get_col_work();
                     cmd.Parameters.Add("?fact", MySqlDbType.VarChar).Value = id_facroty;
                     try
                     {
@@ -115,9 +115,7 @@ namespace Project_Alpha
                     }
                     try
                     {
-                        conn.Open();
-                        cmd.Connection = conn;
-                        cmd.ExecuteNonQuery();
+                        //cmd.ExecuteNonQuery();
                         // MySqlDataReader rdr = cmd.ExecuteReader();
                         // while (rdr.Read())
                         // {
@@ -135,9 +133,16 @@ namespace Project_Alpha
 
                 }
                 conn.Close();
+                stock.refresh_stock(spec.get_spec());
+                post.refresh_post();
+                this.Close();
             }
-        }
+            bt6 = true;
+            bt5 = true;
+            
 
+        }
+        bool bt5 = false;
         private void button3_Click(object sender, EventArgs e)
         {
             now_but_act.BackgroundImage = global::Project_Alpha.Properties.Resources.button_unactive;

@@ -44,12 +44,20 @@ namespace Project_Alpha
                         if (rdr[1].ToString()=="empty")
                         {
                             fac1 = false;
+                            if (!create)
+                            {
+                                button1.Enabled = false;
+                            }
                             this.button1.Text = "Пустой слот";
                             this.button1.BackgroundImage= global::Project_Alpha.Properties.Resources.red_plus_02;
                         }
                         else
                         {
                             fac1 = true;
+                            if (create)
+                            {
+                                button1.Enabled = false;
+                            }
                             this.button1.Text = rdr[1].ToString();
                             this.button1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
                             this.button1.BackgroundImage = global::Project_Alpha.Properties.Resources.factories_1;
@@ -59,6 +67,10 @@ namespace Project_Alpha
                     {
                         if (rdr[1].ToString() == "empty")
                         {
+                            if (!create)
+                            {
+                                button2.Enabled = false;
+                            }
                             fac2 = false;
                             this.button2.Text = "Пустой слот";
                             this.button2.BackgroundImage = global::Project_Alpha.Properties.Resources.red_plus_02;
@@ -66,6 +78,10 @@ namespace Project_Alpha
                         else
                         {
                             fac2 = true;
+                            if (create)
+                            {
+                                button2.Enabled = false;
+                            }
                             this.button2.Text = rdr[1].ToString();
                             this.button2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
                             this.button2.BackgroundImage = global::Project_Alpha.Properties.Resources.factories_2;
@@ -75,6 +91,10 @@ namespace Project_Alpha
                     {
                         if (rdr[1].ToString() == "empty")
                         {
+                            if (!create)
+                            {
+                                button3.Enabled = false;
+                            }
                             fac3 = false;
                             this.button3.Text = "Пустой слот";
                             this.button3.BackgroundImage = global::Project_Alpha.Properties.Resources.red_plus_02;
@@ -82,6 +102,10 @@ namespace Project_Alpha
                         else
                         {
                             fac3 = true;
+                            if (create)
+                            {
+                                button3.Enabled = false;
+                            }
                             this.button3.Text = rdr[1].ToString();
                             this.button3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
                             this.button3.BackgroundImage = global::Project_Alpha.Properties.Resources.factories_3;
@@ -106,7 +130,9 @@ namespace Project_Alpha
             }
             else
             {
-
+                Factory_control_center f_c_C = new Factory_control_center(this,1,id_authorize_worker);
+                f_c_C.Show();
+                this.Hide();
             }
             this.Hide();
         }
@@ -117,6 +143,13 @@ namespace Project_Alpha
             {
                 create_form_1 form = new create_form_1(this, id_authorize_worker, 2, create);
                 form.Show();
+            }
+            else
+            {
+                Factory_control_center f_c_C = new Factory_control_center(this, 2,id_authorize_worker);
+
+                f_c_C.Show();
+                this.Hide();
             }
             this.Hide();
         }
@@ -144,6 +177,12 @@ namespace Project_Alpha
             {
                 create_form_1 form = new create_form_1(this, id_authorize_worker, 2,create);
                 form.Show();
+            }
+            else
+            {
+                Factory_control_center f_c_C = new Factory_control_center(this, 3,id_authorize_worker);
+                f_c_C.Show();
+                this.Hide();
             }
             this.Hide();
         }
