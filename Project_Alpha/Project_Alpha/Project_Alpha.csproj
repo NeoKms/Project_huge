@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AA2AAAF4-ACCD-4805-AF7E-57CC8BE746C5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Project_Alpha</RootNamespace>
+    <AssemblyName>Project_Alpha</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.13.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.13\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="create_form_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="create_form_1.Designer.cs">
+      <DependentUpon>create_form_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factory_control_center.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factory_control_center.Designer.cs">
+      <DependentUpon>Factory_control_center.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factory_statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factory_statistics.Designer.cs">
+      <DependentUpon>Factory_statistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Save_slots.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Save_slots.Designer.cs">
+      <DependentUpon>Save_slots.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Select_factories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Select_factories.Designer.cs">
+      <DependentUpon>Select_factories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_bucklers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_bucklers.Designer.cs">
+      <DependentUpon>UserControl_bucklers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_post_.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_post_.Designer.cs">
+      <DependentUpon>UserControl_post_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_smallTonn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_smallTonn.Designer.cs">
+      <DependentUpon>UserControl_smallTonn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_spec.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_spec.Designer.cs">
+      <DependentUpon>UserControl_spec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_stock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_stock.Designer.cs">
+      <DependentUpon>UserControl_stock.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="create_form_1.resx">
+      <DependentUpon>create_form_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factory_control_center.resx">
+      <DependentUpon>Factory_control_center.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factory_statistics.resx">
+      <DependentUpon>Factory_statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Save_slots.resx">
+      <DependentUpon>Save_slots.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Select_factories.resx">
+      <DependentUpon>Select_factories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_bucklers.resx">
+      <DependentUpon>UserControl_bucklers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_post_.resx">
+      <DependentUpon>UserControl_post_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_smallTonn.resx">
+      <DependentUpon>UserControl_smallTonn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_spec.resx">
+      <DependentUpon>UserControl_spec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_stock.resx">
+      <DependentUpon>UserControl_stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pixel_Factory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixel-factory-png_28491.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixel-factory-png_28491.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Handdrawngoods-Busy-Factory.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red-plus-02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factories-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factories-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factories-3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Factory-PNG-Pic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factories-clipart-pabrik-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1057f3131271f23.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\92711637-silhouette-of-a-power-plant.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factories_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factories_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factories_create.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factories_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_unactive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\57_Obo_bulker_sks_vessel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product-Tanker.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
