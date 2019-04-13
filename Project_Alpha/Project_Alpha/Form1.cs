@@ -17,6 +17,8 @@ namespace Project_Alpha
         public Form1()
         {
             InitializeComponent();
+            genetic A1 = new genetic();
+            A1.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)
