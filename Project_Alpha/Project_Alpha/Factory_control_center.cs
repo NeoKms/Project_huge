@@ -19,7 +19,6 @@ namespace Project_Alpha
         {
             InitializeComponent();
             id_worker = id_work;
-            button1.Enabled = false;
             button3.Enabled = false;
             pred_form = pred;
             id_factory = fac_id;
@@ -35,7 +34,7 @@ namespace Project_Alpha
                 rdr.Read();
                 label3.Text = rdr[0].ToString();
                 label4.Text = rdr[1].ToString() + "  "+rdr[2].ToString();
-                label6.Text = "Танкеры: Малотоннажный танкер";
+                label6.Text = "Грузовые: Баклер";
 
             }
             catch (Exception ex)
@@ -74,6 +73,12 @@ namespace Project_Alpha
             Factory_statistics fact = new Factory_statistics(this, id_factory);
             fact.ShowDialog();
           //  this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            genetic A1 = new genetic();
+            A1.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
