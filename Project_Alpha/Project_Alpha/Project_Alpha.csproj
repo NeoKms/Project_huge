@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BD.Designer.cs">
+      <DependentUpon>BD.cs</DependentUpon>
+    </Compile>
     <Compile Include="create_form_1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,13 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="genetic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="genetic.Designer.cs">
+      <DependentUpon>genetic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genetic_Algorithm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -124,6 +137,9 @@
     <Compile Include="UserControl_stock.Designer.cs">
       <DependentUpon>UserControl_stock.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BD.resx">
+      <DependentUpon>BD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="create_form_1.resx">
       <DependentUpon>create_form_1.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="genetic.resx">
+      <DependentUpon>genetic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
