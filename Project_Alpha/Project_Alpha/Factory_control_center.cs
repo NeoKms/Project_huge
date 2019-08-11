@@ -34,7 +34,7 @@ namespace Project_Alpha
                 rdr.Read();
                 label3.Text = rdr[0].ToString();
                 label4.Text = rdr[1].ToString() + "  "+rdr[2].ToString();
-                label6.Text = "Грузовые: Баклер";
+                label6.Text = "Сухогрузы: Балкер";
 
             }
             catch (Exception ex)
@@ -79,6 +79,17 @@ namespace Project_Alpha
         {
             genetic A1 = new genetic();
             A1.Show();
+        }
+
+        private void Factory_control_center_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            BD form = new BD();
+            form.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)

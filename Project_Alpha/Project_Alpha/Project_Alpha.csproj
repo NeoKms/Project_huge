@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BD.Designer.cs">
+      <DependentUpon>BD.cs</DependentUpon>
+    </Compile>
     <Compile Include="create_form_1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     <Compile Include="UserControl_stock.Designer.cs">
       <DependentUpon>UserControl_stock.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BD.resx">
+      <DependentUpon>BD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="create_form_1.resx">
       <DependentUpon>create_form_1.cs</DependentUpon>
     </EmbeddedResource>

@@ -17,7 +17,9 @@ namespace Project_Alpha
             InitializeComponent();
             this.checkBox1.Checked = true;
             this.button2.Enabled = false;
+            this.button3.Enabled = false;
         }
+
 
         private void genetic_Load(object sender, EventArgs e)
         {
@@ -35,6 +37,7 @@ namespace Project_Alpha
             ALG_1_test = new Genetic_Algorithm();
             A=ALG_1_test.start_gen_alg(Convert.ToInt32(this.textBox1.Text), Convert.ToInt32(this.textBox2.Text), this.richTextBox1);
             this.button2.Enabled = true;
+            this.button3.Enabled = true;
         }
 
         private void button2_Click(object sender, EventArgs e)

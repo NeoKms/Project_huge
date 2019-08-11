@@ -32,7 +32,7 @@ namespace Project_Alpha
                 rdr.Read();
                 label3.Text = rdr[0].ToString();
                 label4.Text = rdr[1].ToString() + "  " + rdr[2].ToString();
-                label6.Text = "Танкеры: Малотоннажный танкер";
+                label6.Text = "Грузовые: Баклер";
 
             }
             catch (Exception ex)
